@@ -6,6 +6,8 @@ Allowing essential port i.e 8501
 Part-2 Application installation 
 Step-1 update & Install Python 3.7+ and pip
 sudo apt update && sudo apt install python3 python3-pip python3-venv -y
-Step-2  Install Git  sudo apt install git -y
+Step-2  Install Git  
+sudo apt install git -y
 Step-3 Install Poppler (for pdf2image)
-Step-4 sudo apt install poppler-utils -y
+Step-4 sudo 
+apt install poppler-utils -y
