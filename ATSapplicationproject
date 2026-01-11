@@ -1,3 +1,5 @@
+10        12   15  21 
+
 Part 1 AWS Ubuntu EC2 instance:
 Launch a new EC2 instance
 Ubuntu Server 20.04 LTS
@@ -9,5 +11,26 @@ sudo apt update && sudo apt install python3 python3-pip python3-venv -y
 Step-2  Install Git  
 sudo apt install git -y
 Step-3 Install Poppler (for pdf2image)
-Step-4 sudo 
-apt install poppler-utils -y
+Step-4 
+sudo apt install poppler-utils -y
+
+
+
+Step-1 Download Code
+
+git clone https://github.com/CloudDevOpsHub/Application-Tracking-System.git
+
+Step-2  cd Application-Tracking-System
+
+Step-3 Set Up a Virtual Environment
+ python3 -m venv venv
+ source venv/bin/activate
+
+Step-4 Install Project Dependencies
+ pip install --upgrade pip
+ pip install -r requirements.txt
+ pip install google-generativeai
+
+
+
+
