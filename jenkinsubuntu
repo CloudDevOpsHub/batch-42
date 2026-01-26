@@ -11,3 +11,20 @@ echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]"   https://pkg.jenki
 sudo apt update
 sudo apt install jenkins
 systemctl status jenkins
+
+
+
+
+---------------------------------
+
+
+sudo apt update && sudo apt install -y openjdk-17-jdk
+
+
+Jenkins job 1
+https://github.com/CloudDevOpsHub/26janmyfirstjavacI
+*/main
+
+
+javac hellopworld.java
+java hellopworld
