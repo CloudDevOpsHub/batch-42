@@ -1,0 +1,33 @@
+ 1  curl -fsSL https://get.docker.com -o install-docker.sh
+    2  ls
+    3  sh install-docker.sh
+    4  docker --version
+    5  docker ps
+    6  docker ps -a
+    7  docker images
+    8  docker run hello-world
+    9  docker ps
+   10  docker ps -a
+   11  docker images
+   12  docker run -it ubuntu
+   13  docker ps
+   14  docker ps -a
+   15  docker start 8aafca4a6f92
+   16  docker ps
+   17  docker exec -it 8aafca4a6f92 bin/bash
+   18  docker ps
+   19  docker images
+   20  docker commit 8aafca4a6f92 anuragiswrongimage
+   21  docker images
+   22  docker pull nginx
+   23  docker images
+   24  docker run nginx
+   25  docker ps
+   26  docker ps -a
+   27  docker run -p 80:80 nginx
+   28  docker run --name docker-nginx -p 80:80 nginx
+   29  docker ps -a
+   30  docker run --name -d docker-nginx -p 80:80 nginx
+   31  docker run --name docker-nginx -d -p 80:80 nginx
+   32  docker run --name docker-nginx1 -d -p 80:80 nginx
+   33  history
