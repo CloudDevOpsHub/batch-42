@@ -35,119 +35,123 @@
 
 # 🐳 **Docker Installation & Basic Commands – Practice Guide**
 
-This guide covers **Docker installation and basic commands on Linux**, including container management, image handling, and **Nginx testing**.
+> 📘 **Hands-on Docker practice on Linux**  
+> Learn how to install Docker, manage containers & images, and test using **Nginx**.
 
 ---
 
-## **1. Install Docker**
+## 🔹 **1. Install Docker**
 
 ```bash
 curl -fsSL https://get.docker.com -o install-docker.sh
-Explanation:
-Downloads the official Docker installation script and saves it as install-docker.sh.
+📌 Explanation:
+➡️ Downloads the official Docker installation script and saves it as install-docker.sh.
 
 ls
-Explanation:
-Verifies that install-docker.sh is downloaded.
+📌 Explanation:
+➡️ Verifies that install-docker.sh is downloaded.
 
 sh install-docker.sh
-Explanation:
-Installs Docker Engine on the system.
+📌 Explanation:
+➡️ Installs Docker Engine on your Linux system.
 
-2. Verify Docker Installation
+🔹 2. Verify Docker Installation
 docker --version
-Explanation:
-Confirms Docker installation and shows version.
+📌 Explanation:
+➡️ Confirms Docker installation and displays the installed version.
 
-3. Container Management
+🔹 3. Container Management Commands
 docker ps
-Explanation: Shows running containers only.
+📌 Explanation:
+➡️ Shows only running containers.
 
 docker ps -a
-Explanation: Shows all containers (running + stopped).
+📌 Explanation:
+➡️ Shows all containers (running + stopped).
 
-4. Image Management
+🔹 4. Image Management Commands
 docker images
-Explanation:
-Lists all locally available Docker images.
+📌 Explanation:
+➡️ Lists all locally available Docker images.
 
-5. Run Test Container
+🔹 5. Run Test Container
 docker run hello-world
-Explanation:
-Validates Docker installation.
+📌 Explanation:
+➡️ Runs a test container to verify Docker is working correctly.
 
-6. Run Ubuntu Container (Interactive)
+🔹 6. Run Ubuntu Container (Interactive Mode)
 docker run -it ubuntu
-Explanation:
-Starts Ubuntu in interactive mode.
+📌 Explanation:
+➡️ Starts an Ubuntu container in interactive terminal mode.
 
-7. Start Existing Container
+🔹 7. Start Existing Container
 docker start <container_id>
-Example:
+✅ Example:
 
 docker start 8aafca4a6f92
-Explanation:
-Starts a stopped container.
+📌 Explanation:
+➡️ Starts a previously stopped container.
 
-8. Access Container Terminal
+🔹 8. Access Container Terminal
 docker exec -it <container_id> /bin/bash
-Example:
+✅ Example:
 
 docker exec -it 8aafca4a6f92 /bin/bash
-Explanation:
-Opens terminal inside a running container.
+📌 Explanation:
+➡️ Opens a bash terminal inside a running container.
 
-9. Create Image from Container
+🔹 9. Create Image from Container
 docker commit <container_id> <new_image_name>
-Example:
+✅ Example:
 
 docker commit 8aafca4a6f92 anuragiswrongimage
-Explanation:
-Creates a new image from container state.
+📌 Explanation:
+➡️ Creates a new Docker image from the container state.
 
-10. Pull Nginx Image
+🔹 10. Pull Nginx Image
 docker pull nginx
-Explanation:
-Downloads the official Nginx image.
+📌 Explanation:
+➡️ Downloads the official Nginx image from Docker Hub.
 
-11. Run Nginx Container
+🔹 11. Run Nginx Container
 docker run nginx
-Explanation:
-Runs Nginx without external access.
+📌 Explanation:
+➡️ Runs Nginx container (not accessible externally yet).
 
-12. Run Nginx with Port Mapping
+🔹 12. Run Nginx with Port Mapping
 docker run -p 80:80 nginx
-Explanation:
-Maps container port 80 to host 80.
+📌 Explanation:
+➡️ Maps container port 80 to host port 80
+➡️ Access via browser: http://localhost
 
-13. Run Nginx in Background with Name
+🔹 13. Run Nginx in Background with Name
 docker run --name docker-nginx -d -p 80:80 nginx
-Explanation:
+📌 Explanation:
 
---name → Container name
+--name → Assigns container name
 
--d → Detached mode
+-d → Runs in background (detached mode)
 
 -p 80:80 → Port mapping
 
-14. Common Mistake
-❌ Wrong
+❌ 14. Common Mistake
+🚫 Wrong Command
 
 docker run --name -d docker-nginx -p 80:80 nginx
-✅ Correct
+✅ Correct Command
 
 docker run --name docker-nginx -d -p 80:80 nginx
-Reason:
---name must be followed by the container name.
+⚠️ Reason:
+➡️ --name must be followed immediately by the container name.
+➡️ Flag order matters!
 
-15. Command History
+🔹 15. Command History
 history
-Explanation:
-Shows previously executed commands.
+📌 Explanation:
+➡️ Displays previously executed commands (useful for revision & troubleshooting).
 
 🎯 Practice Tip
-After running Nginx with port mapping, open your browser:
-
 http://localhost
-If you see the Nginx Welcome Page, Docker networking is working perfectly! 🚀
+✅ If you see the Nginx Welcome Page,
+🎉 Docker networking is working perfectly! 🚀
 
