@@ -31,3 +31,7 @@
    31  docker run --name docker-nginx -d -p 80:80 nginx
    32  docker run --name docker-nginx1 -d -p 80:80 nginx
    33  history
+
+
+
+
