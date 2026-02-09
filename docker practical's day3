@@ -223,3 +223,12 @@ docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/ngi
 </body>
 </html>
 
+
+----------------
+
+
+ 13  docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+   14  cat /var/jenkins_home/secrets/initialAdminPassword
+   15  docker ps
+   16  docker exec -it b1f980c2a1f2 bin/bash
+   17  history
