@@ -1,0 +1,41 @@
+root@day5:~# history
+    1  sudo apt-get update &&  apt install docker.io -y
+    2  docker run -it ubuntu
+    3  docker images
+    4  docker ps -a
+    5  docker start 2d84148e8989
+    6  docker ps
+    7  docker images
+    8  docker commit 2d84148e8989 abhishekimagepython
+    9  docker images
+   10  docker save abhishekimagepython > sandeep.tar
+   11  ls
+   12  docker ps
+   13  docker inspect wonderful_cannon
+   14  docker logs wonderful_cannon
+   15  docker logs -f wonderful_cannon
+   16  docker logs -follow wonderful_cannon
+   17  docker stats
+   18  docker logs -f wonderful_cannon > indra.log
+   19  docker logs  wonderful_cannon > indra.log
+   20  ls
+   21  docker logs --follow wonderful_cannon
+   22  history
+   23  docker network create batch42
+   24  docker network ls
+   25  docker run -d --name web1 --network batch42 nginx
+   26  docker ps
+   27  docker run -it --name client1 --network myapp-network busybox sh
+   28  docker run -it --name client1 --network batch42 busybox sh
+   29  docker ps
+   30  docker ps -a
+   31  docker rm -f e331f5f7b712 
+   32  docker run -it --name client1 --network batch42 busybox sh
+   33  docker network ls
+   34  docker system df
+   35  docker images
+   36  docker ps -a
+   37  docker system prune
+   38  docker images
+   39  docker image prune -a 
+   40  history
