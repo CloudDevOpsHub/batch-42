@@ -11,3 +11,48 @@ Step 4 :- kubectl get pods -w
 Step 5 :- Find out the external IP from the Command
 kubectl get service frontend-external | awk '{print $4}'
 
+463  ls
+  464  git clone https://github.com/GoogleCloudPlatform/microservices-demo.git 
+  465  ls
+  466  cd microservices-demo/
+  467  ls
+  468  cd release/
+  469  ls
+  470  kubectl get po
+  471  kubectl get svc
+  472  kubectl get deploy
+  473  ls
+  474  kubectl create -f kubernetes-manifests.yaml
+  475  kubectl get po
+  476  history
+  477  kubectl get po
+  478  kubectl get svc
+  479  kubectl get po
+  480  kubectl delete po paymentservice-549dc89756-qz497
+  481  kubectl get po
+  482  kubectl get deploy
+  483  kubectl get po
+  484  kubectl get deploy
+  485  kubectl delete deploy paymentservice
+  486  kubectl get deploy
+  487  kubectl get po
+  488  ls
+  489  kubectl apply -f kubernetes-manifests.yaml
+  490  kubectl get po
+  491  kubectl get deploy
+  492  kubectl delete deploy checkoutservice
+  493  ls
+  494  cd ..
+  495  ls
+  496  cd kubernetes-manifests/
+  497  ls
+  498  kubectl apply -f cartservice.yaml
+  499  kubectl get po
+  500  gcloud container clusters get-credentials project --region asia-east1 --project march22paid
+  501  kubectl get po
+  502  kubectl get svc
+  503  ls
+  504  cd batch-42
+  505  ls
+  506  kubectl get po  -o wide
+  507  history
