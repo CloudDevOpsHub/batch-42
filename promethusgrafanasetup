@@ -1,0 +1,21 @@
+                      Infrastructure creation’s
+
+Step 1 Create a GKE cluster
+
+Step 2 Create a Namespace monitor (good practice)
+ kubectl create ns monitor
+
+Step 3 go to helm repo (code) of Promothus and grafana      Helm code is available on 
+ https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+
+Step 4 Add the repo in helm 
+
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+
+Step 5 Install the Grafana and Promothus
+helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack --namespace monitor
+
+“kube-prometheus-stack” is the name of the release. You can change this if you want.
+“prometheus-community/kube-prometheus-stack” is the name of the chart.
+“monitor” is the name of the namespace where we are going to deploy the operator.
