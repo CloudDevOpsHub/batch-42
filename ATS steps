@@ -39,6 +39,28 @@ Step-3 Set Up a Virtual Environment
  python3 -m venv venv
  source venv/bin/activate
 
+----------------
+
+AWS + GCP + AI ATS System  
+Part 4 AI Gemini Setup 
+
+Get Gemini API Key from Google Cloud Platform (GCP)
+Go to google cloud console à Create project àsearch gemini apiàclick on gemini api --> manage -->Generative Language API->credentials --> create credentails -->get api
+
+Part-5 Connect AWS ATS application with GCP Gemini AI
+ 
+1.Add the API Key to Streamlit Secrets
+mkdir -p .streamlit
+vi .streamlit/secrets.toml
+
+GOOGLE_API_KEY = "your-api-key-here"
+
+2.Run the Streamlit App
+    streamlit run app.py --server.port 8501 --server.enableCORS false
+
+
+
+
 Step-4 Install Project Dependencies
  pip install --upgrade pip
  pip install -r requirements.txt
