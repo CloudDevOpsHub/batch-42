@@ -58,3 +58,28 @@ Step 8 Start the service ssh if its not running
 service ssh status
 service ssh start 
 service ssh status  
+
+
+------------------------------
+
+
+Step 9 change the root password to admin 
+passwd root
+Admin
+Admin
+
+
+Part 4 Perform the same all steps with target 2 and so on
+Step 10 
+
+
+Part 5  Find the IP’s of all targets container  for adding in ansible host file 
+Come out to docker node and run the command 
+
+Step 11
+sudo docker inspect target1
+sudo docker inspect target2 
+
+
+You will find the IPAddress like 172.17.0.3
+
