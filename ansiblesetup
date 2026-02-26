@@ -33,3 +33,28 @@ add-apt-repository --yes --update ppa:ansible/ansible
 apt install ansible
 
 ansible --version
+
+--------------------------
+
+
+Part 3 Setup n number of target machines (2)/ container(2)Login to Target and setup target 1 
+
+Step 5  Login to target 1 
+docker exec -it target1 bash
+
+Step 6 Update and install SSH and required dependencies 
+apt update
+apt install vim python-is-python3 iputils-ping openssh-client -y
+apt-get install openssh-client openssh-server -y
+Geographical area 6 city 44
+
+Step 7 edit sshd_config to allow SSH and root login as ansible requires
+
+cd /etc/ssh 
+vi sshd_config
+uncomment the parameter and modify the permission to yes PermitRootLogin yes and PasswordAuthentication yes
+
+Step 8 Start the service ssh if its not running
+service ssh status
+service ssh start 
+service ssh status  
