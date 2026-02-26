@@ -83,3 +83,26 @@ sudo docker inspect target2
 
 You will find the IPAddress like 172.17.0.3
 
+
+-------------------------
+
+Part 6 setup ansible_master for ssh connectivity  and adding IP’s in hostfile
+
+
+Step 12  go to ansible_master
+
+docker exec -it ansible_master bash
+
+Step 13 edit ansible host file and provide the target IP’s
+cd /etc/ansible/
+ls
+Go to hosts file   
+provide the IP of the target machines   like 172.17.0.3
+
+Step 14 verify as you are able to ping target machine from ansible_master
+
+Ping  <Target machine IP>
+
+
+
+
