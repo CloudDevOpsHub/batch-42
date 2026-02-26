@@ -101,7 +101,53 @@ provide the IP of the target machines   like 172.17.0.3
 
 Step 14 verify as you are able to ping target machine from ansible_master
 
-Ping  <Target machine IP>
+ping  <Target machine IP>
+
+
+-------------------
+
+go back to master machine
+
+Step 15 
+generate the ssh key from the ssh-keygen command 
+
+ssh-keygen
+provide 3 times enter    (1 location verification + 2 time for passwd )
+
+Part 7 copy the generated ssh keys from ansible_master to target machine and check the connectivity
+
+Step 15 Copy the generated key from ansible_master to remote target 
+
+ssh-copy-id root@172.17.0.3
+yes
+
+
+---------------
+
+
+Step 16   You should be able to connect via target machine from ansible_master 
+ssh root@172.17.0.3
+
+verify nginx is there or not 
+
+service nginx status
+
+Part 8 Now create a ansible playbook  and run  ansible-playbook 
+
+Step 17 :- create a installnginx.yaml file in 
+cd /etc/ansible
+vi  installnginx.yaml
+
+
+
+
+---
+- hosts: all
+  tasks:
+    - name: ensure nginx is at the latest version
+      apt: name=nginx state=latest
+
+
 
 
 
