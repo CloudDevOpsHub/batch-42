@@ -122,3 +122,33 @@ echo $sum
 
 
 Run with                            ./ 
+
+
+-----------------
+
+
+Savitri Suralkar 9:11
+for i in {1..3}; do ps -ef; sleep 30; done
+
+
+
+
+Shell Script To Display The Running Process Running On The System Every 30 Seconds For 3 Times Only
+
+#!/bin/bash
+# Write a shell script to display the process running on the system for every
+# 30 seconds, but only for 3 times.
+# -------------------------------------------------------------------------
+# -------------------------------------------------------------------------
+# 
+# for loop 3 times
+for r in 1 2 3
+do
+	#see every process on the system
+	echo "**************************** x^x^x ****************************"
+	ps
+	echo "**************************** x^x^x ****************************"
+	#sleep for 30 seconds
+	sleep 3
+        # clean
+done
